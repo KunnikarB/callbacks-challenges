@@ -11,3 +11,17 @@ function addTwo(num: number): number {
 // To check if you've completed it, uncomment these console.logs!
  console.log(addTwo(3));
  console.log(addTwo(10));
+
+
+ // DONE ✅ Challenge 2
+/* 
+Create a function addS that accepts one input and adds an "s" to it.
+*/
+// Add type string and return type also string
+function addS(word: string): string {
+  return word + "s";
+}
+
+// Test
+console.log(addS("pizza"));
+console.log(addS("bagel"));
