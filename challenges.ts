@@ -47,3 +47,25 @@ function map(array: number[], callback: (num: number) => number): number[] {
 }
 // Test
 console.log(map([1, 2, 3], addTwo)); 
+
+// DONE ✅ Challenge 4
+/* 
+The function forEach takes an array and a callback, and runs the callback on each element of the array. forEach does not return anything.
+*/
+
+// Add <T> generic type to works with any type
+// The input is an array of type T (T[])
+// callback takes one element of type T and returns nothing (void)
+function forEach<T>(array:T[], callback: (item: T) => void): void {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
+}
+
+// see for yourself if your forEach works!
+let alphabet = "";
+const letters = ["a", "b", "c", "d"];
+forEach(letters, function (char) {
+  alphabet += char;
+});
+console.log(alphabet);
