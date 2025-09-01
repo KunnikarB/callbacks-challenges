@@ -9,6 +9,7 @@ function addTwo(num: number): number {
 }
 
 // To check if you've completed it, uncomment these console.logs!
+console.log('********** Challenge 1 **********');
  console.log(addTwo(3));
  console.log(addTwo(10));
 
@@ -23,6 +24,7 @@ function addS(word: string): string {
 }
 
 // Test
+console.log('********** Challenge 2 **********');
 console.log(addS("pizza"));
 console.log(addS("bagel"));
 
@@ -46,6 +48,7 @@ function map(array: number[], callback: (num: number) => number): number[] {
   return newArr;
 }
 // Test
+console.log('********** Challenge 3 **********');
 console.log(map([1, 2, 3], addTwo)); 
 
 // DONE ✅ Challenge 4
@@ -64,8 +67,30 @@ function forEach<T>(array:T[], callback: (item: T) => void): void {
 
 // see for yourself if your forEach works!
 let alphabet = "";
+
 const letters = ["a", "b", "c", "d"];
+
 forEach(letters, function (char) {
   alphabet += char;
 });
+
+console.log('********** Challenge 4 **********');
 console.log(alphabet);
+
+// DONE ✅ Challenge 5
+/* 
+In the first part of this challenge, you're going to rebuild map as mapWith. This time you're going to use forEach inside of mapWith instead of using a for loop.
+*/
+
+// Rebuild map as mapWith
+function mapWith<T, U>(array: T[], callback: (item: T) => U): U[] {
+
+  const newArr: U[] = [];
+
+  forEach(array, (item) => {
+    newArr.push(callback(item));
+  });
+  return newArr;
+}
+console.log('********** Challenge 5 **********');
+console.log(mapWith([1, 2, 3], addTwo));
