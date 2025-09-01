@@ -25,3 +25,25 @@ function addS(word: string): string {
 // Test
 console.log(addS("pizza"));
 console.log(addS("bagel"));
+
+// ✅ DONE - Challenge 3
+/* 
+Create a function called map that takes two inputs:
+1. an array of numbers
+2. a 'callback' function - applied to each element of the array
+Return a new array filled with numbers from the callback.
+*/
+
+// Add an array of number[]
+function map(array: number[], callback: (num: number) => number): number[] {
+
+  // Add an array of number[]
+  const newArr: number[] = [];
+
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(callback(array[i]));
+  }
+  return newArr;
+}
+// Test
+console.log(map([1, 2, 3], addTwo)); 
